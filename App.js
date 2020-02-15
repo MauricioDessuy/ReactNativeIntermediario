@@ -1,41 +1,19 @@
 import React, { Component } from 'react';
 import { StyleSheet, AsyncStorage, Text, View, ScrollView, FlatList, SectionList, Picker, Switch, Slider, Modal, Button, StatusBar, TextInput, Platform } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import Tela1 from './src/screens/Tela1';
+import Tela2 from './src/screens/Tela2';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      plataforma: Platform.OS
-    };
-
-    
-  }
-
-  render () {
-
-    return (
-      <View style={styles.body}>
-        <Text style={styles.texto}>Alguma frase qualquer</Text>
-      </View> 
-    )
-  }
-}
-
-const styles = StyleSheet.create({
-  body: {
-    paddingTop: 30,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+const AppNavigator = createStackNavigator({
+  Tela1: {
+    screen: Tela1
   },
-  texto: Platform.select({
-    ios: {
-      fontSize: 16,
-      color: '#0000ff'
-    },
-    android: {
-      fontSize: 20,
-      color: '#00ff00'
-    }
-  })
+  Tela2: {
+    screen: Tela2
+  }
 });
+
+const AppContainer = createAppContainer(AppNavigator);
+
+export default AppContainer;
