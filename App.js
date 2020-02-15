@@ -8,12 +8,22 @@ import Tela2 from './src/screens/Tela2';
 const AppNavigator = createStackNavigator({
   Tela1: {
     screen: Tela1,
-    title: 'Tela 1'
   },
   Tela2: {
     screen: Tela2,
-    title: 'Tela 2'
   }
+}, {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: '#ff0000',
+      height: 100
+    },
+    headerTintColor: '#ffffff',
+    headerTitleStyle: {
+        fontWeight: 'bold',
+        fontSize: 40
+    }
+  },
 });
 
 const AppContainer = createAppContainer(AppNavigator);

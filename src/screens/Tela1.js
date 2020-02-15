@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 export default class Tela1 extends Component {
 
     static navigationOptions = {
-        title: 'Tela 1'
+        title: 'Tela 1',
     };
 
     render() {
