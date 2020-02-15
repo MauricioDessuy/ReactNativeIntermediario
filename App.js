@@ -7,10 +7,12 @@ import Tela2 from './src/screens/Tela2';
 
 const AppNavigator = createStackNavigator({
   Tela1: {
-    screen: Tela1
+    screen: Tela1,
+    title: 'Tela 1'
   },
   Tela2: {
-    screen: Tela2
+    screen: Tela2,
+    title: 'Tela 2'
   }
 });
 
