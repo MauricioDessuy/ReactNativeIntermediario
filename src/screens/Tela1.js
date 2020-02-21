@@ -11,7 +11,7 @@ export default class Tela1 extends Component {
         return (
             <View>
                 <Text>Tela 1</Text>
-                <Button title="Ir para a tela 2" onPress={() => this.props.navigation.navigate('Tela2', {nome: 'Mauricio', idade: 22})} />
+                <Button title="Ir para a tela 2" />
             </View>
         );
     }

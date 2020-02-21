@@ -1,31 +1,25 @@
-import React, { Component } from 'react';
-import { StyleSheet, AsyncStorage, Text, View, ScrollView, FlatList, SectionList, Picker, Switch, Slider, Modal, Button, StatusBar, TextInput, Platform } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Tela1 from './src/screens/Tela1';
 import Tela2 from './src/screens/Tela2';
 
-const AppNavigator = createStackNavigator({
-  Tela1: {
-    screen: Tela1,
-  },
-  Tela2: {
-    screen: Tela2,
-  }
-}, {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: '#ff0000',
-      height: 100
-    },
-    headerTintColor: '#ffffff',
-    headerTitleStyle: {
-        fontWeight: 'bold',
-        fontSize: 40
-    }
-  },
-});
+const Tab = createBottomTabNavigator();
 
-const AppContainer = createAppContainer(AppNavigator);
+function MyTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Tela 1" component={Tela1} />
+      <Tab.Screen name="Tela 2" component={Tela2} />
+    </Tab.Navigator>
+  );
+}
 
-export default AppContainer;
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
+  );
+}
