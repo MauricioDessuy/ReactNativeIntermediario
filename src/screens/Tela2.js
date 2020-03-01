@@ -9,11 +9,18 @@ export default class Tela2 extends Component {
 
     render() {
         return (
-            <View>
+            <View style={styles.body}>
                 <Text>Tela 2</Text>
-                
                 <Button title="Voltar"  />
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    body: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+});

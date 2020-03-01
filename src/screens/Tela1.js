@@ -9,10 +9,18 @@ export default class Tela1 extends Component {
 
     render() {
         return (
-            <View>
+            <View style={styles.body}>
                 <Text>Tela 1</Text>
                 <Button title="Ir para a tela 2" />
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    body: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+});
