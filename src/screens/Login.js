@@ -7,7 +7,7 @@ function HomeScreen({navigation}) {
         <Text>Logar</Text>
         <Button
           title="Fazer login"
-          onPress={() => navigation.navigate('HomeTab')}
+          onPress={() => navigation.navigate('Drawer')}
         />
       </View>
     );

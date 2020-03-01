@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './src/screens/Login';
 import HomeTab from './src/screens/HomeTab';
+import Drawer from './src/screens/Drawer';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ function App() {
           headerShown: false,
         }}>
         <Stack.Screen name="Login" component={Login} options={{ title: 'Logue-se' }}/>
+        <Stack.Screen name="Drawer" component={Drawer} />
         <Stack.Screen name="HomeTab" component={HomeTab} />
       </Stack.Navigator>
     </NavigationContainer>
