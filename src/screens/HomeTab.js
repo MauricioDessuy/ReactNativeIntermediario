@@ -8,7 +8,17 @@ const Tab = createBottomTabNavigator();
 
 export default function HomeTab() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName='Home' 
+      tabBarOptions={{
+        activeTintColor: '#e91e63',
+        showIcon: true,
+        showLabel: true,
+        inactiveTintColor: '#00FF00',
+        tabStyle: {
+          backgroundColor: '#ffff00',
+        },
+        
+      }} >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Explore" component={Explore} />
     </Tab.Navigator>
